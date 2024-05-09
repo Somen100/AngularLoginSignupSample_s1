@@ -1,0 +1,132 @@
+<div class="container " style="height: 100vh;">
+  <div class="row Title">
+    <div class="col-sm-12 d-flex justify-content-center align-items-center custom-margin-bottom">
+      <H1 class="heading">HRX Technologies</H1>
+    </div>
+  </div>
+  <div class="row content d-flex justify-content-center align-items-center">
+    <div class="col-sm-6 leftcontent d-flex justify-content-center align-items-center " >
+      <!-- LOGIN img-->
+      <img *ngIf="isLogin" src="../../../assets/img/login.jpg" class="img-fluid" style="max-height: 100%; max-width: 100%;">
+
+      <!-- SIGNUP img-->
+      <img *ngIf="isSignUp" src="../../../assets/img/signup.jpg" class="img-fluid" style="max-height: 100%; max-width: 100%;">
+    </div>
+    <!-- LOGIN -->
+    <div *ngIf="isLogin" class="col-sm-6 rightcontent d-flex justify-content-center align-items-center mb-0 " >
+
+      <div class="login-form">
+
+        <div class="row text-center mt-0 mb-5">
+          <div class="col-sm-12">
+          <H1 class="subheading">Login</H1>
+          </div>
+
+        </div>
+        <div class="row mt-3">
+          <div class="col-sm-12">
+            <div class="row justify-content-center align-items-center mb-3">
+              <div class="col-sm-4">
+                <label for="email" class="form-label">Email:</label>
+              </div>
+              <div class="col-sm-8">
+                <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control"
+                [(ngModel)]="userLogin.email" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="row justify-content-center align-items-center mb-3">
+              <div class="col-sm-4">
+                <label for="password" class="form-label">Password:</label>
+              </div>
+              <div class="col-sm-8">
+                <input type="password" id="password" name="password" placeholder="Enter your password" class="form-control"
+                [(ngModel)]="userLogin.password" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-sm-6">
+                <button type="button" class="btn btn-primary btn-block" (click)="signup()">Sign Up</button>
+              </div>
+              <div class="col-sm-6">
+                <button type="button" class="btn btn-primary btn-block" (click)="login()">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGNUP -->
+    <div *ngIf="isSignUp" class="col-sm-6 rightcontent d-flex justify-content-center align-items-center mb-0 " >
+      <div class="login-form">
+
+        <div class="row text-center mt-0 mb-5">
+          <div class="col-sm-12">
+          <H1 class="subheading">Sign up</H1>
+          </div>
+
+        </div>
+        <div class="row mt-3">
+          <div class="col-sm-12">
+            <div class="row justify-content-center align-items-center mb-3">
+              <div class="col-sm-4">
+                <label for="password" class="form-label">Name:</label>
+              </div>
+              <div class="col-sm-8">
+                <input type="text" id="name" name="name" placeholder="Enter your name"
+                class="form-control" required [(ngModel)]="userRegister.name">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="row justify-content-center align-items-center mb-3">
+              <div class="col-sm-4">
+                <label for="email" class="form-label">Email:</label>
+              </div>
+              <div class="col-sm-8">
+                <input type="email" id="email" name="email" placeholder="Enter your email"
+                class="form-control" required [(ngModel)]="userRegister.email">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="row justify-content-center align-items-center mb-3">
+              <div class="col-sm-4">
+                <label for="password" class="form-label">Password:</label>
+              </div>
+              <div class="col-sm-8">
+                <input type="password" id="password" name="password" placeholder="Enter your password"
+                class="form-control" required [(ngModel)]="userRegister.password">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="row justify-content-center align-items-center mb-3">
+              <div class="col-sm-4">
+                <label for="password" class="form-label">Confirm Password:</label>
+              </div>
+              <div class="col-sm-8">
+                <input type="password" id="password" name="password" placeholder="Enter your password"
+                class="form-control" required [(ngModel)]="userRegister.confirmPassword">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-sm-6">
+                <button type="button" class="btn btn-primary btn-block" (click)="signup()">Sign Up</button>
+              </div>
+              <div class="col-sm-6">
+                <button type="button" class="btn btn-primary btn-block" (click)="login()">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

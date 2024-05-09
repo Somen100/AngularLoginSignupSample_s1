@@ -1,0 +1,21 @@
+<div class="container-fluid" style="background-color: rgb(170, 186, 230);">
+  <app-nav></app-nav>
+  <div class="content" style="padding: 0.5rem;">
+    <table class="table table-bordered table-striped" style="width: 100%;">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of tableData">
+          <td>{{ data.fullname }}</td>
+          <td>{{ data.password }}</td>
+          <td>{{ data.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
