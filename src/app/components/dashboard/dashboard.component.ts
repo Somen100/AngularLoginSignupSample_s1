@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
 
     this.userRegister=this._dataService.getUserData();
     console.log("this.userRegister ==> ",this.userRegister);
-   if (this.userRegister && this.userRegister.password) {
+   if (this.userRegister.password) {
     this.tableData.push({
         fullname: this.userRegister.name || '', // Use empty string as fallback if name is undefined
         password: this.userRegister.password,
